@@ -8,13 +8,4 @@ class handler(BaseHTTPRequestHandler):
         handle_options(self)
 
     def do_GET(self):
-        send_json(
-            self,
-            {
-                "success": True,
-                "service": "sova-online",
-                "version": "0.1.0",
-                "pipeline": "single-ast",
-                "message": "Sova IDE API is running",
-            },
-        )
+        send_json(self, {"success": True, "service": "sova-online", "version": "0.1.0", "pipeline": "single-ast"})
