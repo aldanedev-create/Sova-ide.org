@@ -1,0 +1,7 @@
+let name: String = "Aldane"
+let age: Int = 27
+let active: Bool = true
+let city: String? = null
+
+age += 1
+print("{name} is {age}; active={active}; city={city ?? 'Unknown'}")

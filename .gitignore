@@ -1,0 +1,10 @@
+website/node_modules/
+website/dist/
+build/
+dist/
+release/*.exe
+release/*.zip
+release/SHA256SUMS.txt
+__pycache__/
+*.pyc
+.vercel/

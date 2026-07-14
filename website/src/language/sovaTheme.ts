@@ -1,0 +1,1 @@
+export function registerSovaTheme(monaco: any) { monaco.editor.defineTheme("sova-dark", { base: "vs-dark", inherit: true, rules: [{ token: "keyword", foreground: "34d399" }, { token: "constant", foreground: "f97360" }, { token: "string", foreground: "f6c177" }], colors: { "editor.background": "#111315", "editorLineNumber.foreground": "#696d72" } }); }

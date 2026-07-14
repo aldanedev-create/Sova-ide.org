@@ -1,0 +1,61 @@
+// Complete Sova 0.1v acceptance program.
+
+import Sova.Math
+import Sova.Files
+
+let name = "Aldane"
+let age = 27
+let active = true
+let scores = [88, 92, 76, 95]
+let profile = {
+    name: name,
+    age: age,
+    active: active
+}
+
+print("Hello {profile.name}, you are {profile.age} years old")
+print("First score: {scores[0]}, last score: {scores[-1]}")
+
+let { name: profileName, age: profileAge } = profile
+print("{profileName} is {profileAge}")
+
+class Player(name, health) {
+    function isAlive() {
+        return self.health > 0
+    }
+
+    function takeDamage(amount) {
+        self.health -= amount
+
+        if not self.isAlive() {
+            print("{self.name} has fallen")
+        }
+    }
+}
+
+let hero = Player("Aldane", 100)
+hero.takeDamage(45)
+
+print("Health: {hero.health}")
+print("Alive: {hero.isAlive()}")
+
+function average(numbers) {
+    return 0 if numbers.isEmpty()
+
+    let total = numbers.reduce(
+        (sum, number) => sum + number,
+        0
+    )
+
+    return Sova.Math.round(total / numbers.length())
+}
+
+print("Average score: {average(scores)}")
+
+let city = profile?.address?.city ?? "Unknown"
+print("City: {city}")
+
+let data = try Sova.Files.read("scores.json") else "{}"
+print(data)
+
+shell "echo Sova command complete"

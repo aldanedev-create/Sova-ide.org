@@ -1,0 +1,9 @@
+import Sova.Files
+import Sova.Json
+
+let fallback = "{\"status\": \"missing\"}"
+let text = try Sova.Files.read("data.json") else fallback
+let data = Sova.Json.parse(text)
+let status = data.status ?? "unknown"
+
+print("Status: {status}")

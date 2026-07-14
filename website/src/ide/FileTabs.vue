@@ -1,0 +1,2 @@
+<script setup lang="ts">import { X } from "lucide-vue-next";import { useIdeStore } from "../stores/ide";const ide = useIdeStore();</script>
+<template><div class="file-tabs"><button v-for="(_, name) in ide.files" :key="name" type="button" :class="{ active: name === ide.activeFile }" @click="ide.activeFile = name"><span>{{ name }}</span><X v-if="Object.keys(ide.files).length > 1" :size="13" @click.stop="ide.deleteFile(name)" /></button></div></template>

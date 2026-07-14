@@ -1,0 +1,5 @@
+# String methods exposed by Sova's runtime property adapter.
+let StringMethods = [
+    "length", "upper", "lower", "trim", "split", "replace",
+    "contains", "startsWith", "endsWith", "slice"
+]

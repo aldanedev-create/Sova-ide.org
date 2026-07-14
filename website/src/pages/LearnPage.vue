@@ -1,0 +1,4 @@
+<script setup lang="ts">
+const lessons = ["Hello World", "Variables", "Lists and objects", "Conditions", "Loops", "Functions", "Classes", "Modules", "Error handling", "Standard libraries", "Building a CLI program", "Scientific data example"];
+</script>
+<template><section class="page-hero compact"><p class="eyebrow">Structured curriculum</p><h1>Learn Sova from first output to complete programs.</h1><p>Twelve ordered lessons use short explanations, runnable source, objectives, and project exercises.</p></section><section class="section"><ol class="lesson-grid"><li v-for="(lesson, index) in lessons" :key="lesson"><span>{{ String(index + 1).padStart(2, '0') }}</span><div><h2>{{ lesson }}</h2><p>{{ index < 5 ? 'Build the core language habits used in every Sova program.' : 'Apply Sova to reusable modules, domain models, and real tools.' }}</p></div><RouterLink :to="`/ide?lesson=${index + 1}`">Open lesson</RouterLink></li></ol></section></template>

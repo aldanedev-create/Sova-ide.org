@@ -1,0 +1,8 @@
+import Sova.Statistics
+
+let readings = [18.4, 19.1, 20.0, 18.9, 21.2]
+let warm = readings.filter(value => value >= 19)
+
+print("Readings: {readings.length()}")
+print("Mean: {Sova.Statistics.mean(readings)}")
+print("Warm readings: {warm}")

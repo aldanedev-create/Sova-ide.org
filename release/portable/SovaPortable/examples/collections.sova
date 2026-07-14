@@ -1,0 +1,8 @@
+let numbers = [1, 2, 3, 4, 5]
+let doubled = numbers.map(number => number * 2)
+let even = numbers.filter(number => number % 2 == 0)
+let total = numbers.reduce((sum, number) => sum + number, 0)
+
+print(doubled)
+print(even)
+print(total)

@@ -1,0 +1,2 @@
+use Nova.json
+let Json = Nova.json

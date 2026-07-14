@@ -1,0 +1,7 @@
+<script setup lang="ts">
+import { Braces, CheckCircle2, Download, FileJson2, FileSearch, Play, RotateCcw, Sparkles, Wand2 } from "lucide-vue-next";
+import { useIdeStore } from "../stores/ide";
+import { downloadProject } from "../services/downloads";
+const ide = useIdeStore();
+</script>
+<template><div class="ide-toolbar"><RouterLink class="ide-brand" to="/"><img src="/logo.svg" alt="" /><strong>Sova IDE</strong></RouterLink><div class="toolbar-actions"><button class="tool primary" type="button" :disabled="ide.loading" title="Run (Ctrl+Enter)" @click="ide.run"><Play :size="16" />Run</button><button class="tool" type="button" :disabled="ide.loading" title="Check (Ctrl+Shift+B)" @click="ide.check"><CheckCircle2 :size="16" />Check</button><button class="tool" type="button" :disabled="ide.loading" title="Format (Ctrl+Shift+F)" @click="ide.format"><Wand2 :size="16" />Format</button><button class="icon-button" type="button" title="Show tokens" @click="ide.inspect('tokens')"><FileJson2 :size="17" /></button><button class="icon-button" type="button" title="Show AST" @click="ide.inspect('ast')"><Braces :size="17" /></button><button class="icon-button" type="button" title="Explain source" @click="ide.explain"><Sparkles :size="17" /></button><button class="icon-button" type="button" title="Reset project" @click="ide.reset"><RotateCcw :size="17" /></button><button class="icon-button" type="button" title="Download project ZIP" @click="downloadProject(ide.files)"><Download :size="17" /></button></div></div></template>

@@ -1,0 +1,1 @@
+# Sova's basic interpreter and Vercel functions require only Python 3.

@@ -1,0 +1,26 @@
+# Canonical library registry: these are aliases, not duplicate implementations.
+use Nova.math
+use Nova.files
+use Nova.json
+use Nova.time
+use Nova.random
+use Nova.regex
+use Nova.crypto
+use Nova.csv
+use Nova.path
+use Nova.http
+use Nova.statistics
+
+let SovaLibraries = {
+    Math: Nova.math,
+    Files: Nova.files,
+    Json: Nova.json,
+    Time: Nova.time,
+    Random: Nova.random,
+    Regex: Nova.regex,
+    Crypto: Nova.crypto,
+    Csv: Nova.csv,
+    Path: Nova.path,
+    Http: Nova.http,
+    Statistics: Nova.statistics
+}

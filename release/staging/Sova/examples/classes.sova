@@ -1,0 +1,16 @@
+class User(name) {
+    function describe() {
+        return "User: {self.name}"
+    }
+}
+
+class Admin extends User {
+    function canDelete() {
+        return true
+    }
+}
+
+let admin = Admin()
+admin.name = "Aldane"
+print(admin.describe())
+print(admin.canDelete())

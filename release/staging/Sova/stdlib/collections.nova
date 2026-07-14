@@ -1,0 +1,7 @@
+# High-level collection behavior is implemented by Sova runtime properties.
+let CollectionMethods = [
+    "add", "append", "insert", "remove", "pop", "clear",
+    "contains", "length", "isEmpty", "first", "last", "sort",
+    "reverse", "map", "filter", "reduce", "find", "any", "all",
+    "unique", "join"
+]

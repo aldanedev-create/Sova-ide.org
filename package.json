@@ -1,0 +1,11 @@
+{
+  "name": "sova-platform",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix website run dev",
+    "build": "npm --prefix website run build",
+    "sync": "python scripts/sync_sova.py",
+    "test:engine": "python -m unittest discover -s ../sova/tests -p test_*.py"
+  }
+}

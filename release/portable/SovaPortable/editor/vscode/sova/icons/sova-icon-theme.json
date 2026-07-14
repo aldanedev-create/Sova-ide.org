@@ -1,0 +1,19 @@
+{
+  "iconDefinitions": {
+    "_file": { "iconPath": "./file.svg" },
+    "_folder": { "iconPath": "./folder.svg" },
+    "_folder_open": { "iconPath": "./folder-open.svg" },
+    "_sova": { "iconPath": "./sova.svg" }
+  },
+  "file": "_file",
+  "folder": "_folder",
+  "folderExpanded": "_folder_open",
+  "fileExtensions": {
+    "sova": "_sova"
+  },
+  "languageIds": {
+    "sova": "_sova"
+  },
+  "hidesExplorerArrows": false,
+  "showLanguageModeIcons": true
+}

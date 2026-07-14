@@ -1,0 +1,39 @@
+name: Windows Release
+
+on:
+  workflow_dispatch:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Inno Setup
+        shell: powershell
+        run: choco install innosetup --yes --no-progress
+      - name: Build signed-ready artifacts
+        shell: powershell
+        run: .\sova-platform\installer\windows\build.ps1
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sova-windows
+          path: |
+            sova-platform/release/*.exe
+            sova-platform/release/*.zip
+            sova-platform/release/SHA256SUMS.txt
+      - name: Attach assets to tagged release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            sova-platform/release/*.exe
+            sova-platform/release/*.zip
+            sova-platform/release/SHA256SUMS.txt

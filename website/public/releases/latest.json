@@ -1,0 +1,25 @@
+{
+  "version": "0.1.0",
+  "released_at": "2026-07-12",
+  "status": "available-unsigned",
+  "checksums": {
+    "filename": "SHA256SUMS.txt",
+    "url": "/downloads/SHA256SUMS.txt"
+  },
+  "windows": {
+    "installer": {
+      "filename": "SovaSetup-x64-0.1.0.exe",
+      "url": "/downloads/SovaSetup-x64-0.1.0.exe",
+      "sha256": "da8d98791b1724f6237c1f38c2eda6415633364a331525395164f8081583426c",
+      "size": 49388010,
+      "available": true
+    },
+    "portable": {
+      "filename": "SovaPortable-x64-0.1.0.zip",
+      "url": "/downloads/SovaPortable-x64-0.1.0.zip",
+      "sha256": "b3a392c4452b3e7d2ad27a2e3c0638c21143e52f2be431883042f7935f8c7630",
+      "size": 47549458,
+      "available": true
+    }
+  }
+}

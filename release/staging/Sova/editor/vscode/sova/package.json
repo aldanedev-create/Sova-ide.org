@@ -1,0 +1,70 @@
+{
+  "name": "sova-language",
+  "displayName": "Sova Language Support",
+  "description": "Rich Sova syntax highlighting, snippets, editor behavior, and .sova file icons.",
+  "version": "0.1.0",
+  "publisher": "sova",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets",
+    "Other"
+  ],
+  "keywords": [
+    "sova",
+    "language",
+    "syntax highlighting",
+    "textmate"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "sova",
+        "aliases": [
+          "Sova",
+          "sova"
+        ],
+        "extensions": [
+          ".sova"
+        ],
+        "firstLine": "^#!.*\\bsova\\b",
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "./icons/sova.svg",
+          "dark": "./icons/sova.svg"
+        }
+      }
+    ],
+    "grammars": [
+      {
+        "language": "sova",
+        "scopeName": "source.sova",
+        "path": "./syntaxes/sova.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "sova",
+        "path": "./snippets/sova.code-snippets"
+      }
+    ],
+    "iconThemes": [
+      {
+        "id": "sova-icons",
+        "label": "Sova File Icons",
+        "path": "./icons/sova-icon-theme.json"
+      }
+    ],
+    "configurationDefaults": {
+      "[sova]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 4,
+        "editor.formatOnType": false,
+        "editor.wordBasedSuggestions": "matchingDocuments"
+      }
+    }
+  }
+}

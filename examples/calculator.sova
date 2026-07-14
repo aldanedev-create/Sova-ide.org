@@ -1,0 +1,9 @@
+function calculate(left, operator, right) {
+    if operator == "+" { return left + right }
+    elif operator == "-" { return left - right }
+    elif operator == "*" { return left * right }
+    elif operator == "/" { return left / right }
+    throw ValueError("Unknown operator: {operator}")
+}
+
+print(calculate(12, "*", 4))

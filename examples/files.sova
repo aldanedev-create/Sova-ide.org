@@ -1,0 +1,4 @@
+import Sova.Files
+
+let contents = try Sova.Files.read("missing.txt") else "No local file"
+print(contents)

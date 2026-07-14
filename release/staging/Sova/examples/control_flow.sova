@@ -1,0 +1,10 @@
+let total = 0
+
+for number in 1..5 {
+    if number == 3 {
+        continue
+    }
+    total += number
+}
+
+print(total)
